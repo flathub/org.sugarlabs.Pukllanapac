@@ -1,0 +1,47 @@
+diff --git a/PukllanapacActivity.py b/PukllanapacActivity.py
+index b852184..349a348 100644
+--- a/PukllanapacActivity.py
++++ b/PukllanapacActivity.py
+@@ -41,6 +41,7 @@ from toolbar_utils import radio_factory, label_factory, separator_factory, \
+ from window import Game
+ 
+ from sugarapp.widgets import SugarCompatibleActivity
++from sugarapp.helpers import PrimaryMonitor
+ 
+ SERVICE = 'org.sugarlabs.PukllanapacActivity'
+ IFACE = SERVICE
+@@ -62,8 +63,8 @@ class PukllanapacActivity(SugarCompatibleActivity):
+ 
+         # Create a canvas
+         canvas = Gtk.DrawingArea()
+-        canvas.set_size_request(Gdk.Screen.width(), \
+-                                Gdk.Screen.height())
++        canvas.set_size_request(PrimaryMonitor.width(), \
++                                PrimaryMonitor.height())
+         self.set_canvas(canvas)
+         canvas.show()
+         self.show_all()
+diff --git a/window.py b/window.py
+index 0af4f38..18dd9e1 100644
+--- a/window.py
++++ b/window.py
+@@ -27,6 +27,8 @@ from grid import Grid
+ from sprites import Sprites
+ from constants import C, MASKS, CARD_DIM
+ 
++from sugarapp.helpers import PrimaryMonitor
++
+ import logging
+ _logger = logging.getLogger('pukllanapac-activity')
+ 
+@@ -62,8 +64,8 @@ class Game():
+             self.canvas.connect("button-press-event", self._button_press_cb)
+             self.canvas.connect("button-release-event", self._button_release_cb)
+             self.canvas.connect("key_press_event", self._keypress_cb)
+-            self.width = Gdk.Screen.width()
+-            self.height = Gdk.Screen.height() - GRID_CELL_SIZE
++            self.width = PrimaryMonitor.width()
++            self.height = PrimaryMonitor.height() - GRID_CELL_SIZE
+             self.card_dim = CARD_DIM
+             self.scale = 0.6 * self.height / (self.card_dim * 3)
+ 
