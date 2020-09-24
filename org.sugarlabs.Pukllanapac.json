@@ -35,6 +35,10 @@
                 },
                 {
                     "type": "patch",
+                    "path": "pukllanapac-screen.patch"
+                },
+                {
+                    "type": "patch",
                     "path": "pukllanapac-info.patch"
                 }
             ],
