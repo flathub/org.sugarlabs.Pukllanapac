@@ -27,7 +27,11 @@
                     "type": "git",
                     "url": "https://github.com/sugarlabs/Pukllanapac.git",
                     "tag": "v14",
-                    "commit": "80423d15c27e1fa84a3296f73e5012d10543bfa4"
+                    "commit": "80423d15c27e1fa84a3296f73e5012d10543bfa4",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 },
                 {
                     "type": "patch",
