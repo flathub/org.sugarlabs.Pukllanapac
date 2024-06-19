@@ -2,7 +2,7 @@ diff --git a/activity/activity.info b/activity/activity.info
 index aa43ea2..cc77365 100644
 --- a/activity/activity.info
 +++ b/activity/activity.info
-@@ -2,11 +2,17 @@
+@@ -2,11 +2,18 @@
  name = Pukllanapac
  activity_version = 14
  license = GPLv3+;MIT
@@ -22,4 +22,5 @@ index aa43ea2..cc77365 100644
  url = https://help.sugarlabs.org/en/pukllanapac.html
 +update_contact = tch@sugarlabs.org
 +developer_name = Sugar Labs Community
++developer_id = org.sugarlabs
 +screenshots = https://raw.githubusercontent.com/sugarlabs/pukllanapac/master/screenshots/en/1.png https://raw.githubusercontent.com/sugarlabs/pukllanapac/master/screenshots/en/2.png https://raw.githubusercontent.com/sugarlabs/pukllanapac/master/screenshots/en/3.png
